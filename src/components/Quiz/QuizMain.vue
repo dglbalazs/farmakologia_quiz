@@ -54,9 +54,16 @@
             </div>
         </form>
       </div>
-      <button class='button-54' @click='selectall'>Mind</button>
-      <button class='button-54' @click='selectnone'>Egyik sem</button>
-      <button class='button-54' @click='submitted'>START</button>
+      <div class='buttons'>
+        <div class="button-row">
+            <button class='button-54' @click='selectall'>Mind</button>
+            <button class='button-54' @click='selectnone'>Egyik sem</button>
+        </div>
+        <div class="button-row">
+            <button class='button-74' @click='submitted'>START</button>
+        </div>
+      </div>
+      
 </template>
 
 <script>
@@ -152,5 +159,18 @@ form {
 input[type='checkbox'] {
     margin: 5px 0px 10px 5px;
 }
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.button-row:nth-child(2) {
+    margin-bottom: 50px;
+}
+
 
 </style>

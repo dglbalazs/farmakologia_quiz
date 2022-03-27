@@ -3,13 +3,8 @@
       <button to="/" class='button-55' @click='goback'>Főmenü</button>
       <QuizMain @start-quiz='setTopics' v-if="init"></QuizMain>
         <QuizQuestions 
-            v-for="question in questions"
-            :key="question.id"
-            :title='question.question'
-            :type='question.type'
-            :answer='question.answer'
-            :t_answer='question.t_answer'
-            :f_answer='question.f_answer'
+            v-if="!init"
+            :questions = 'questions'
         ></QuizQuestions>
   </div>
 </template>
