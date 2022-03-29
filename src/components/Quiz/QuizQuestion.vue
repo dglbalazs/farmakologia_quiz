@@ -148,8 +148,12 @@ export default {
                         this.correct_answ = true
                         basic_msg = 'Nagyon jó!'
 
+                        if (!real_ans) {
+                            this.reply_msg = basic_msg + '<br/>Hiszen:<br/><h3>' + this.t_answer + '</h3>'
+                        } else {
+                            this.reply_msg = basic_msg
+                        }
 
-                        this.reply_msg = basic_msg
                     } else {
                         this.correct_answ = false
                         let corrected_msg = this.t_answer 
@@ -242,6 +246,8 @@ MUTUAL
     justify-content: center;
     align-items: center;
     transition: 2s;
+    margin-left:20px;
+    margin-right: 20px;
 }
 
 
@@ -251,7 +257,7 @@ OPEN QUESTIONS
 -----------------------------------------------------------------------
 */
 .answer-type-q {
-    grid-template-columns: auto 150px 150px 150px auto;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
     grid-template-rows: 25px 200px auto 100px;
     grid-template-areas: 
         'description description description  description description'
@@ -262,7 +268,7 @@ OPEN QUESTIONS
 }
 
 .answer-type-q.answered {
-    grid-template-columns: auto 150px 150px 150px auto;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
     grid-template-rows: auto auto 50px 100px;
     grid-template-areas: 
         '. timer timer timer .'
@@ -290,12 +296,19 @@ OPEN QUESTIONS
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
     background: whitesmoke;
     height:auto;
     border-radius: 25px;
     padding: 50px;
     margin-top:20px;
     margin-bottom:20px;
+}
+
+.answer-type-q > .answer > a {
+    color: blue !important;
 }
 
 
@@ -351,7 +364,7 @@ TRUE OR FALSE
 */
 
 .answer-type-tf {
-    grid-template-columns: auto 150px 150px auto;
+    grid-template-columns: auto 1fr 1fr auto;
     grid-template-rows: 25px 200px auto 100px;
     grid-template-areas: 
         'description description description  description'
@@ -362,7 +375,7 @@ TRUE OR FALSE
 }
 
 .answer-type-tf.answered {
-    grid-template-columns: auto 150px 150px auto;
+    grid-template-columns: auto 1fr 1fr auto;
     grid-template-rows: 25px 200px auto 50px;
     grid-template-areas: 
         'description description description  description'
@@ -443,5 +456,6 @@ button {
     margin-top: 60px;
     margin-bottom: 150px;
 }
+
 
 </style>

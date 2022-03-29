@@ -9,7 +9,7 @@
       <div class="result">{{result}}</div>
   </div>
   <div class="correct-answer" v-if='clicked'>
-      <div class="definition">{{definition}}</div>
+      <div class="definition" v-html='definition'></div>
   </div>
 </template>
 
@@ -106,7 +106,8 @@ export default {
     font-size: 1em;
     background: white;
     border-radius: 50px;
-    height: 100px;
+    height: auto;
+    padding:50px;
 }
 
 </style>

@@ -4,25 +4,31 @@
         <form action="" >
 
             <div class="form-row">
-                <input type="checkbox" name="Alapfogalmak" id="Alapfogalmak" value='Alapfogalmak' v-model='topics' ref='checkbox'>
-                <label for='Alapfogalmak'>Alapfogalmak</label>
+                <input type="checkbox" name="Elsodia" id="Elsodia" value='Elsodia' v-model='topics' ref='checkbox'>
+                <label for='Elsodia'>Első dia - 1. fele</label>
             </div>
             
             <div class="form-row">
-                <input type="checkbox" name="tema2" id="tema2" value='tema2' v-model='topics' ref='checkbox'>
-                <label for='tema2'>Tema 2</label>
+                <input type="checkbox" name="Elsodia2" id="Elsodia2" value='Elsodia2' v-model='topics' ref='checkbox'>
+                <label for='Elsodia2'>Első dia - 2. fele</label>
             </div>
+            
+            <div class="form-row">
+                <input type="checkbox" name="secppt1" id="secppt1" value='secppt1' v-model='topics' ref='checkbox'>
+                <label for='secppt1'>Második ppt - 1. rész ( alapfogalmak, farmakokinetika, gyógyszermolekulák átjutása sejtmembránokon, membrán-diffúzió )</label>
+            </div>
+
+             <div class="form-row">
+                <input type="checkbox" name="secppt2" id="secppt2" value='secppt2' v-model='topics' ref='checkbox'>
+                <label for='secppt2'>Második ppt - 2. rész ( Carrier-Mediált transzport, aquaporinok, pinocitózis, bioavailability, first-pass effect )</label>
+            </div>
+
 
             <div class="form-row">
-                <input type="checkbox" name="tema3" id="tema3" value='tema3' v-model='topics' ref='checkbox'>
-                <label for='tema3'>Tema 3</label>
+                <input type="checkbox" name="secppt3" id="secppt3" value='secppt3' v-model='topics' ref='checkbox'>
+                <label for='secppt3'>Második ppt - 3. rész (AUC, AUC, még egy kis AUC, gyógyszerek felszívódása, adagolási útvonalak)</label>
             </div>
-
-            <div class="form-row">
-                <input type="checkbox" name="tema4" id="tema4" value='tema4' v-model='topics' ref='checkbox'>
-                <label for='tema4'>Tema 4</label>
-            </div>
-
+<!--
             <div class="form-row">
                 <input type="checkbox" name="tema5" id="tema5" value='tema5' v-model='topics' ref='checkbox'>
                 <label for='tema5'>Tema 5</label>
@@ -51,7 +57,9 @@
             <div class="form-row">
                 <input type="checkbox" name="tema10" id="tema10" value='tema10' v-model='topics' ref='checkbox'>
                 <label for='tema10'>Tema 10</label>
-            </div>
+            </div> 
+
+            -->
         </form>
       </div>
       <div class='buttons'>
@@ -112,7 +120,7 @@ export default {
 }
 
 form {
-    height: 250px;
+    height: auto;
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -141,7 +149,7 @@ form {
   }
 
   .form-row > label {
-    --transform-scale: 1.1;
+    --transform-scale: 1.01;
     flex: 1;
   }
 
