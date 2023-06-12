@@ -157,7 +157,7 @@ export default {
                     } else {
                         this.correct_answ = false
                         let corrected_msg = this.t_answer 
-                        basic_msg = 'Ajajj!'
+                        basic_msg = 'Majdnem - '
 
                         if (this.tf_random) {
                             this.reply_msg = basic_msg + ' Sajnos, ez valójában nagyon is <b><font color="GREEN">igaz</font></b>'

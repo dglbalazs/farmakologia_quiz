@@ -3,7 +3,7 @@
         <h1 class='form-title'>Milyen témákat érintsünk?</h1>
         <form action="" >
 
-            <div class="form-row">
+            <!-- <div class="form-row">
                 <input type="checkbox" name="Elsodia" id="Elsodia" value='Elsodia' v-model='topics' ref='checkbox'>
                 <label for='Elsodia'>Első dia - 1. fele</label>
             </div>
@@ -27,6 +27,26 @@
             <div class="form-row">
                 <input type="checkbox" name="secppt3" id="secppt3" value='secppt3' v-model='topics' ref='checkbox'>
                 <label for='secppt3'>Második ppt - 3. rész (AUC, AUC, még egy kis AUC, gyógyszerek felszívódása, adagolási útvonalak)</label>
+            </div> -->
+
+            <div class="form-row">
+                <input type="checkbox" name="Cs-10" id="Cs-10" value='cs-generator-10' v-model='topics' ref='checkbox'>
+                <label for='Cs-10'>Csecsemő Mozgásfejlődés - 10 kérdés</label>
+            </div>
+
+            <div class="form-row">
+                <input type="checkbox" name="Cs-25" id="Cs-25" value='cs-generator-25' v-model='topics' ref='checkbox'>
+                <label for='Cs-25'>Csecsemő Mozgásfejlődés - 25 kérdés</label>
+            </div>
+
+            <div class="form-row">
+                <input type="checkbox" name="Cs-50" id="Cs-50" value='cs-generator-50' v-model='topics' ref='checkbox'>
+                <label for='Cs-50'>Csecsemő Mozgásfejlődés - 50 kérdés</label>
+            </div>
+
+            <div class="form-row">
+                <input type="checkbox" name="Cs-100" id="Cs-100" value='cs-generator-100' v-model='topics' ref='checkbox'>
+                <label for='Cs-100'>Csecsemő Mozgásfejlődés - 100 kérdés</label>
             </div>
 <!--
             <div class="form-row">

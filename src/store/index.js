@@ -769,11 +769,372 @@ export default createStore({
         answer:'<ul><li>Orrnyálkahártya</li><li>Húgycső</li><li>Hüvely (de csak, ha van - ha nincs, akkor nem)</li><li>Szem (őő..de csak ha van?)</li><li>Fül</li><li>Implantátumok</li></ul>',
         t_answer:'',
         f_answer:''
-      }
-        
-        
-        
-    ]
+      }        
+    ],
+    questions_TrueOrFalseGenerator : [
+        {
+          id: 1,
+          owner: "Újszülött",
+          answers: [
+            "Flexios tartás jellemző",
+            "Hátonfekvésben nincs fejkontroll",
+            "Zárt ujjak, hüvelykujj közre fogása (flexio)"
+          ]
+        },
+        {
+          id: 2,
+          owner: "1 hónapos",
+          answers: [
+            "Hason képes felemelni az állát",
+            "Ültetve- görnyedt hát, próbálja felemelni a fejét.",
+            "Felüléskor a fej hátra marad",
+            "Mozgásai koordinálatlanok",
+            "Zárt ujjak, hüvelykujj flexio"
+          ]
+        },
+        {
+          id: 3,
+          owner: "6 hetes",
+          answers: [
+            "Ventrális függesztésben fejét pillanatig emeli a törzs vonalában",
+            "Hason a medence magasan, de a térdek már nincsenek a has alatt, fejét emeli 45 fokig",
+            "Kezeit kezdi nyitni (nap ¼-ben)",
+            "Visszamosolyog",
+            "Ha látás figyelmét lekötik és beszélnek hozzá: szemkontaktust létesít, kisebb hangokat hallat"
+          ]
+        },
+        {
+          id: 4,
+          owner: "2 hós",
+          answers: [
+            "Ventrális függesztésben: fej a törzs vonalában",
+            "Hason: fejét 45 fokig emeli alkartámaszban",
+            "Ültetve: hát kevésbé görbe, de a feje előre bukik",
+            "Energikus karmozgások",
+            "Kezei nap felében nyitva, szájába veszi az öklét",
+            "Mozgó személyt, tárgyat követ",
+            "Egyszerű magánhangzókkal gügyög"
+          ]
+        },
+        {
+          id: 5,
+          owner: "3 hós",
+          answers: [
+            "Ventrális függesztésben fejét a testvonala felé emeli tartósan",
+            "Hason 45-90 fok közé emeli alkaron a fejet",
+            "Ültetve: Fej java részt stabil, időnként előre billen",
+            "Ülésbe húzáskor csak enyhén ejti a fejet",
+            "Keze többnyire nyitva van, tárgyat aktívan megfog",
+            "Spontán mosolyog",
+            "Gagyog"
+          ]
+        },
+        {
+          id: 6,
+          owner: "4 hós",
+          answers: [
+            "Hason 90 fokig emeli a fejét, alkaron hintázik",
+            "Ülésbe húzáskor a fej szinte együtt jön a törzzsel",
+            "Rövid időre megtartja magát nyújtott lábakon",
+            "Oldalra fordul",
+            "Csörgőt ráz, ha a kezébe teszik",
+            "Nyújtott kar miközben nyúl",
+            "Kezeit közép vonalban összefogja, ujjaival játszik",
+            "Hangosan nevetgél, nyelvét nem nyújtogatja"
+          ]
+        },
+        {
+          id: 7,
+          owner: "5 hós",
+          answers: [
+            "Nyújtott könyökre támaszkodva fejét 90 fokig emeli",
+            "Ülésbe húzáskor fej nem marad el, hanem előre is tolja",
+            "Támasztott ülésben fej stabil, hát egyenes",
+            "Kezd forogni",
+            "Tárgyat akaratlagosan megfog",
+            "Asztal lapot ütöget",
+            "Mind két kézzel nyúl",
+            "Ah-oh, gagyog"
+          ]
+        },
+        {
+          id: 8,
+          owner: "6 hós",
+          answers: [
+            "Állítva súlyát teljesen meg tudja tartani",
+            "Minimális támasszal önállóan ül",
+            "Hason kúszik",
+            "Nyúl a közel lévő tárgyakért",
+            "Nagylábujjal játszik, bögrét fülénél fogja, majd eldob",
+            "Elkezd félni az idegenektől",
+            "Köhögést, nyelvnyújtást utánoz",
+            "Mosolyog és beszélget a tükörképéhez",
+            "Gurgulázik, nyögdécsel",
+            "Gügyögés"
+          ]
+        },
+        {
+          id: 9,
+          owner: "7 hós",
+          answers: [
+            "Hason egyik karján megtartja magát",
+            "Gurul",
+            "Állítva rugózik",
+            "Sima felületen előre támaszkodva önállóan ül",
+            "Radiális jellegű fogás",
+            "Szájába veszi a lábát",
+            "Átveszi egyik kezéből a másikba a tárgyakat",
+            "Jelzi az érzéseit: pl nem kér többet enni, vegyék fel",
+            "Mam-mam-mam főleg síráskor"
+          ]
+        },
+        {
+          id: 10,
+          owner: "8 hós",
+          answers: [
+            "Sima felületen egyenes háttal ül",
+            "Megáll ha váll magasságban megfogják a karját",
+            "Felemelkedik négykézlábra, de még hátrafelé haladhat",
+            "Alsó olló fogás",
+            "Felkap kisebb tárgyakat, felemeli és egy darabig tartja",
+            "Nevére hallgat",
+            "Harap, rág",
+            "Hangokat utánoz, kukucskát játszik",
+            "Nem-re időnként reagál"
+          ]
+        },
+        {
+          id: 11,
+          owner: "9 hós",
+          answers: [
+            "Stabilan ül önállóan kb 15 percig",
+            "Szabályosan mászik",
+            "Csipesz fogás",
+            "Darabosat önállóan majszolgat",
+            "Pohárból segítséggel iszik",
+            "Tapsi-tapsi játékot játszik",
+            "Mama-baba helytelen használata"
+          ]
+        },
+        {
+          id: 12,
+          owner: "10 hós",
+          answers: [
+            "Feláll kapaszkodva",
+            "Egyenes háttal stabilan ül tartósan",
+            "Ülésből hasra fordul",
+            "Állásból fenékre zöttyen",
+            "Könnyedén mászik négykézláb",
+            "Mutatóujjal nyomkod",
+            "Pá-pát integet",
+            "Mama-baba helyes használata"
+          ]
+        },
+        {
+          id: 13,
+          owner: "11 hós",
+          answers: [
+            "Hasról könnyedén felül",
+            "Apró tárgyat tartóba beejt, de kivenni nem tudja",
+            "Játékot kérésre nyújt, de nem engedi el",
+            "Kabátból karját kihúzza, de beledugni nem tudja",
+            "Fejét rázza a nem jelzésre"
+          ]
+        },
+        {
+          id: 14,
+          owner: "12 hós",
+          answers: [
+            "Ülésből tárgyakért elmozdul",
+            "Váll magasságban kezét fogva jár",
+            "Könnyedén használja a csipesz fogást, miközben könyökére nem támaszkodik",
+            "Levesz magasabbról tárgyakat",
+            "Rejtett tárgyat megtalál",
+            "Mama-baba és egy másik szó",
+            "1 lépéses felszólítást teljesít"
+          ]
+        },
+        {
+          id: 15,
+          owner: "13 hós",
+          answers: [
+            "Egyik kezét fogva jár",
+            "Önállóan megáll",
+            "Nagyon kevés dolgot vesz a szájába",
+            "Segítséggel öltözik",
+            "Játékot oda ad",
+            "Csészét, poharat tartja iváskor és fejét dönti",
+            "Ceruzával firkál",
+            "Kézzel jól eszik",
+            "Nagyobb a megértő szókincse",
+            "Ha egyedül van gagyog magának"
+          ]
+        },
+        {
+          id: 16,
+          owner: "14 hós",
+          answers: [
+            "Néhány lépést önállóan megtesz",
+            "Könnyedén megfog 2 kockát vagy kisebb tárgyakat 1 kézzel",
+            "Labdát dobja és azzal játszik",
+            "Kérésre játékot a helyére tesz",
+            "3-4 szót mond"
+          ]
+        },
+        {
+          id: 17,
+          owner: "15 hós",
+          answers: [
+            "Lépcsőn felfelé mászik",
+            "Kapaszkodás nélkül feltérdel és feláll",
+            "Lehajol és felegyenesedik",
+            "Sarkoknál nem tud hirtelen megállni v fordulni",
+            "Állva lezöttyen és feláll",
+            "2 kockából tornyot épít",
+            "Segít könyvet lapozni"
+          ]
+        },
+        {
+          id: 18,
+          owner: "18 hós",
+          answers: [
+            "Ügyetlenül szalad",
+            "Ritkán elesik járás közben",
+            "Lépcsőn felfelé megy kapaszkodva egymás mellé lépve",
+            "Székre mászik",
+            "Járáskor játékot visz magával vagy húz maga után",
+            "Labdát elesés nélkül dob el",
+            "3-4 kockából tornyot épít",
+            "2-3 oldalt hajtva lapoz",
+            "Kanalat elforgatás nélkül használ",
+            "Jelzi a nedves pelenkát",
+            "Egy testrészt ismer",
+            "Képre rámutat",
+            "Két lépéses utasítást teljesít",
+            "10 szót mond",
+            "Ismeri a Szia és a Köszönöm értelmét",
+            "Saját nevére hallgat",
+            "Összetettebben gagyarászik"
+          ]
+        },
+        {
+          id: 19,
+          owner: "21 hós",
+          answers: [
+            "Jól szalad, de néha elesik",
+            "Felfelé a lépcsőn váltott lábbal megy kapaszkodva",
+            "Lefelé egymás mellé lép kapaszkodva",
+            "Labdába belerúg bemutatás után",
+            "5-6 kockából tornyot épít",
+            "Öltözködés célzatosan",
+            "Enni és innivalót megnevezve kéri",
+            "Jelzi ha wc-re kell menni",
+            "10-20 szava van",
+            "2-3 szót kapcsol, visszamond 2 szót",
+            "Meghatározottan névmásokat használ",
+            "3 testrészt ismer"
+          ]
+        },
+        {
+          id: 20,
+          owner: "24 hós",
+          answers: [
+            "Szalad, ritkán esik el",
+            "Önállóan lépcsőzik fel-le (kapaszkodás nélkül)",
+            "Labdát rúgja bemutatás nélkül",
+            "Tárgyat feje felöl dob",
+            "6-7 kockából épít tornyot",
+            "Egyesével lapozza a könyvet",
+            "Ajtókilincset lenyom",
+            "Kupakot lecsavar",
+            "Marokra fogott kanalat használ",
+            "Egyszerűbb ruhadarabokat felvesz",
+            "Társaival játszik",
+            "Szeret kezet mosni és törölni",
+            "Pohárból iszik",
+            "Elhadja a gagyarászást",
+            "2-3 szavas mondatokat mond",
+            "52 szava van",
+            "3 lépéses utasítást teljesít",
+            "Személyes névmást helytelenül használ"
+          ]
+        },
+        {
+          id: 21,
+          owner: "30 hós",
+          answers: [
+          "Két lábbal ugrik",
+          "Lábujjhegyen megy bemutatás után",
+          "Egy lábon próbál állni",
+          "8 kockából épít tornyot",
+          "Krétát megfelelően fog",
+          "Önállóan használja a wc-t, fenék törlés kivételével",
+          "Segít dolgokat helyre rakni",
+          "Villát jól használ",
+          "Névmással nevezi meg magát",
+          "Egyszerű kérdéseket tesz fel"
+          ]
+          },
+          {
+          id: 22,
+          owner: "36 hós",
+          answers: [
+          "Egy lábon egy pillanatra megáll",
+          "Alsó lépcsőről leugrik",
+          "Váltott lábbal lépcsőzik felfelé",
+          "Biciklizik",
+          "Kancsóból tölt",
+          "9-10 kockából épít",
+          "Kigombol, cipzárt fel le húz",
+          "Anyjától könnyen elválik",
+          "Önállóan étkezik",
+          "Másokkal együtt játszik",
+          "Saját nevét ismeri",
+          "Egy színt ismer",
+          "Néhány dallamot ismer, többes számot használ",
+          "10-13-ig számolhat",
+          "3-4 szavas ragozott mondatokat használ"
+          ]
+          },
+          {
+          id: 23,
+          owner: "48 hós",
+          answers: [
+          "Egy lábon 5 mp-ig megáll",
+          "Kettőt ugrik egy lábon",
+          "Lefelé is váltott lábbal lépcsőzik",
+          "Két lábon előre ugrál",
+          "Ruhát begombol",
+          "Cipőt fűt",
+          "Asszociációs játékot játszik",
+          "Önállóan wc-zik",
+          "Fogat mos",
+          "3 tárgyat megszámlál",
+          "3 színt ismer",
+          "Rengeteget kérdez",
+          "Dalokat énekel",
+          "4-5 szavas ragozott mondatokban beszél legalább"
+          ]
+          },
+          {
+          id: 24,
+          owner: "60 hós",
+          answers: [
+          "Szökdécsel váltott lábbal",
+          "Tartósan megáll egy lábon",
+          "Elkapja a felé dobott labdát",
+          "Cipőfűzőt megköti",
+          "Önállóan öltözik, eszik, házi munkát elvégzi",
+          "Igyekszik a beszélgetést irányítani",
+          "Miért korszak",
+          "Szavak értelmére kíváncsi",
+          "A pénzzel tisztában van",
+          "4 színt ismer",
+          "10-ig számol",
+          "Tudja az életkorát"
+          ]
+          }
+        ]
   },
   mutations: {
     setCurrentPage(state,payload) {
@@ -781,10 +1142,49 @@ export default createStore({
     },
 
     setQuestions(state,categories) {
-      state.questions_chosen = state.questions.filter(item=>
-        {
-          return categories.indexOf(item.cat)>-1
-        })
+      categories.forEach(category => {
+        if(category.includes('generator')) {
+          let parts = category.split('-'); // parts is ["cs", "generator", "15"]
+          let questionNumber = Number(parts[2]); // Converting string to number  
+          for(let i = 0; i < questionNumber; i++) {
+  
+            let question, item;
+            // Ensure we generate a unique question
+            do {
+              // Select a random item from the questions_TrueOrFalseGenerator array
+              item = state.questions_TrueOrFalseGenerator[Math.floor(Math.random() * state.questions_TrueOrFalseGenerator.length)];
+              // Randomly picking an answer from the current item and using it as the question
+              question = item.answers[Math.floor(Math.random() * item.answers.length)];
+            } while (state.questions_chosen.some(q => q.question === question))
+
+            // Selecting a random different item for the false answer
+            let differentItem;
+            do {
+              differentItem = state.questions_TrueOrFalseGenerator[Math.floor(Math.random() * state.questions_TrueOrFalseGenerator.length)];
+            } while(differentItem.id === item.id);
+    
+            // Picking a random false answer (from another owner)
+            let f_answer = differentItem.owner;
+    
+            // Push the new question into the state.questions_chosen array
+            state.questions_chosen.push({
+              id: state.questions_chosen.length + 1, // ID is based on the current length of the state.questions_chosen array
+              cat: 'generated',
+              type: 'tf',
+              question: question,
+              answer: '',
+              t_answer: 'Rá vonatkozik: ' + item.owner, // The owner of the current item
+              f_answer: 'Rá vonatkozik: ' + f_answer
+            });
+          }
+        } else {
+        state.questions_chosen = state.questions.filter(item=>
+          {
+            return category.indexOf(item.cat)>-1
+          })
+        }
+      });
+      
     }
   },
   actions: {
@@ -792,8 +1192,8 @@ export default createStore({
       state.commit('setCurrentPage',payload)
     },
 
-    async setQuestions(state,categories) {
-      state.commit('setQuestions',categories)
+    async setQuestions(state,categories,questionNumber) {
+      state.commit('setQuestions',categories,questionNumber)
     }
   },
   modules: {
