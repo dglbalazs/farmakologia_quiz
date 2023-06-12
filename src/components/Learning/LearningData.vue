@@ -61,7 +61,7 @@ export default {
     background: white;
     /* border-radius: 50px; */
     height: auto;
-    padding:50px;
+    /* padding:50px; */
 }
 
 ul {

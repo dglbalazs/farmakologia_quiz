@@ -32,11 +32,15 @@ export default {
 
 .learning-data{
   margin-bottom: 100px;
-  padding: 50px;
   padding-bottom: 150px;
-  margin-inline: 2em;
 }
 
+@media (min-width:50em) {
+    .learning-data {
+        padding: 50px;
+        margin-inline: 2em;
+    }
+}
 
 
 
