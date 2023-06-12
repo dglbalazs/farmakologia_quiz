@@ -19,14 +19,14 @@
             <span>Ismétlés</span>
             </div>
 
-            <div 
+            <!-- <div 
                 :class="[mobile_active_option=='smthelse' ? 'selected' : '','menu-option']" 
                 id='smthelse'
                 onclick='void(0)'
                 @click='clicked'
             >
             <span>Something else</span>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -84,87 +84,13 @@ export default {
     border: 1px solid black;
 
     display: grid;
-    grid-template:
-        1fr 1fr 1fr 
-        /
-        1fr 1fr 1fr 1fr 1fr ;
-    grid-template-areas: 
-    ".  .   .   .   ."
-    ".  option1 option2 option3 ."
-    ".  .   .   .   .";
+    grid-auto-flow: column;
+    gap: 2em;
 }
 
-@media screen and (max-width: 1300px) {
+@media (max-width: 50em) {
     .menu-options {
-        grid-template:
-        1fr 2fr 2fr 2fr 1fr 
-        /
-        1fr 3fr 1fr;
-        grid-template-areas: 
-        ".  .  ."
-        ".  option1   ."
-        ".  option2   ."
-        ".  option3   ."
-        ".  .  .";
-    }
-
-    .menu-option {
-        margin: 10px 0px !important;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .menu-options {
-        grid-template:
-        1fr 2fr 2fr 2fr 1fr 
-        /
-        1fr 2fr 1fr;
-        grid-template-areas: 
-        ".  .  ."
-        ".  option1   ."
-        ".  option2   ."
-        ".  option3   ."
-        ".  .  .";
-    }
-
-    .menu-option {
-        margin: 10px 0px !important;
-    }
-}
-
-@media screen and (max-width: 480px) and (orientation: portrait){
-    .menu-options {
-        grid-template:
-        1fr 2fr 2fr 2fr 1fr 
-        /
-        1fr 15fr 1fr;
-        grid-template-areas: 
-        ".  .  ."
-        ".  option1   ."
-        ".  option2   ."
-        ".  option3   ."
-        ".  .  .";
-    }
-
-    .menu-option {
-        margin: 10px 0px !important;
-    }
-}
-
-@media screen and (max-height: 480px) and (orientation: landscape) {
-    .menu-options {
-        grid-template:
-        1fr 5fr 1fr 
-        /
-        1fr 3fr 3fr 3fr 1fr;
-        grid-template-areas: 
-        ".  .  .    .   ."
-        ".  option1 option2 option3 ."
-        ".  .   .   .   .";
-    }
-
-    .menu-option {
-        margin: 10px 10px !important;
+        grid-auto-flow: row;
     }
 }
 
@@ -209,19 +135,19 @@ export default {
 }
 
 #quiz {
-    grid-area: option1;
+    /* grid-area: option1; */
     --background-img-url: url('../assets/exam.jpg');
     transition:2s;
 }
 
 #learning {
-    grid-area: option2;
+    /* grid-area: option2; */
     --background-img-url: url('../assets/study.jpg');
     transition:2s;
 }
 
 #smthelse {
-    grid-area: option3;
+    /* grid-area: option3; */
     --background-img-url: url('../assets/suffer.jpg');
     transition:2s;
 }
