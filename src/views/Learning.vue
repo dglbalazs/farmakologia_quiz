@@ -2,20 +2,44 @@
   <div class="learning-wrapper">
       <button to="/" class='button-55' @click='goback'>Főmenü</button>
       <div class="welcome-text">
-        Itt még nincs semmi. :(
+        <LearningMain @mounted-comp='setData' :learningdata="learning_data"></LearningMain>
       </div>
   </div>
 </template>
 
 <script>
 
+import { mapGetters, mapActions } from 'vuex';
+import LearningMain from '../components/Learning/LearningMain.vue';
 
 export default {
     name: 'Learning',
-    methods: {
-        goback() {
-            this.$router.push({ path: '/'})
+    components: {
+      LearningMain
+    },
+    data() {
+        return {
+            categories: [],
+            init: true
         }
+    },
+    methods: {
+      ... mapActions(['setLearning']),
+
+      goback() {
+            this.$router.push({ path: '/'})
+        },
+
+        setData() {
+            this.init = false;
+            this.setLearning()
+            console.log(this.learning_data)
+        }
+
+    },
+
+    computed: {
+        ... mapGetters({learning_data:"getLearning"})
     }
 }
 </script>

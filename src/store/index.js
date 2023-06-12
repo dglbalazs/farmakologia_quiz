@@ -3,6 +3,7 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     currentPage: 'home',
+    learning_data: [],
     questions_chosen: [],
     questions: [
       {
@@ -1185,7 +1186,13 @@ export default createStore({
           })
         }
       });
-      
+    },
+
+    setLearning(state) {
+      state.questions_TrueOrFalseGenerator.forEach(element => {
+        console.log(element)
+        state.learning_data.push(element)
+      });
     }
   },
   actions: {
@@ -1195,6 +1202,10 @@ export default createStore({
 
     async setQuestions(state,categories) {
       state.commit('setQuestions',categories)
+    },
+
+    async setLearning(state) { 
+      state.commit('setLearning')
     }
   },
   modules: {
@@ -1202,6 +1213,7 @@ export default createStore({
   },
   getters: {
     getQuestions: (state) => state.questions_chosen,
+    getLearning: (state) => state.learning_data,
     getCurrentPage: (state) => state.currentPage,
    
   }
