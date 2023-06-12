@@ -1142,6 +1142,7 @@ export default createStore({
     },
 
     setQuestions(state,categories) {
+      console.log(categories)
       categories.forEach(category => {
         if(category.includes('generator')) {
           let parts = category.split('-'); // parts is ["cs", "generator", "15"]
@@ -1192,8 +1193,8 @@ export default createStore({
       state.commit('setCurrentPage',payload)
     },
 
-    async setQuestions(state,categories,questionNumber) {
-      state.commit('setQuestions',categories,questionNumber)
+    async setQuestions(state,categories) {
+      state.commit('setQuestions',categories)
     }
   },
   modules: {

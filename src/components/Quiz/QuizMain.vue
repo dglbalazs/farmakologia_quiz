@@ -30,22 +30,22 @@
             </div> -->
 
             <div class="form-row">
-                <input type="checkbox" name="Cs-10" id="Cs-10" value='cs-generator-10' v-model='topics' ref='checkbox'>
+                <input type="radio" name="Cs-10" id="Cs-10" value='cs-generator-10' v-model='topics' ref='radio'>
                 <label for='Cs-10'>Csecsemő Mozgásfejlődés - 10 kérdés</label>
             </div>
 
             <div class="form-row">
-                <input type="checkbox" name="Cs-25" id="Cs-25" value='cs-generator-25' v-model='topics' ref='checkbox'>
+                <input type="radio" name="Cs-25" id="Cs-25" value='cs-generator-25' v-model='topics' ref='radio'>
                 <label for='Cs-25'>Csecsemő Mozgásfejlődés - 25 kérdés</label>
             </div>
 
             <div class="form-row">
-                <input type="checkbox" name="Cs-50" id="Cs-50" value='cs-generator-50' v-model='topics' ref='checkbox'>
+                <input type="radio" name="Cs-50" id="Cs-50" value='cs-generator-50' v-model='topics' ref='radio'>
                 <label for='Cs-50'>Csecsemő Mozgásfejlődés - 50 kérdés</label>
             </div>
 
             <div class="form-row">
-                <input type="checkbox" name="Cs-100" id="Cs-100" value='cs-generator-100' v-model='topics' ref='checkbox'>
+                <input type="radio" name="Cs-100" id="Cs-100" value='cs-generator-100' v-model='topics' ref='radio'>
                 <label for='Cs-100'>Csecsemő Mozgásfejlődés - 100 kérdés</label>
             </div>
 <!--
@@ -84,8 +84,8 @@
       </div>
       <div class='buttons'>
         <div class="button-row">
-            <button class='button-54' @click='selectall'>Mind</button>
-            <button class='button-54' @click='selectnone'>Egyik sem</button>
+            <!-- <button class='button-54' @click='selectall'>Mind</button> -->
+            <!-- <button class='button-54' @click='selectnone'>Egyik sem</button> -->
         </div>
         <div class="button-row">
             <button class='button-74' @click='submitted'>START</button>
@@ -103,14 +103,14 @@ export default {
         }
     },
     methods: {
-        selectall() {
-            document.querySelectorAll('input[type="checkbox"]').forEach((element) => {
-                this.topics.push(element.id)
-            })
-        },
-        selectnone() {
-            this.topics = [];
-        },
+        // selectall() {
+        //     document.querySelectorAll('input[type="checkbox"]').forEach((element) => {
+        //         this.topics.push(element.id)
+        //     })
+        // },
+        // selectnone() {
+        //     this.topics = [];
+        // },
         submitted() {
             if (this.topics.length==0) {
                 alert('Na, legalább egyet válassz azért.')
@@ -184,7 +184,8 @@ form {
     padding: .5em;
   }
 
-input[type='checkbox'] {
+  input[type='checkbox'],
+  input[type='radio'] {
     margin: 5px 0px 10px 5px;
 }
 

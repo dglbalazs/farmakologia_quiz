@@ -34,7 +34,7 @@ export default {
             this.$router.push({ path: '/'})
         },
         setTopics(topics) {
-            this.topics = topics;
+            this.topics = typeof topics == 'string' ? [topics] : topics;
             this.init = false;
             this.setQuestions(this.topics)
             console.log(this.topics[0])
