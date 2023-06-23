@@ -30,22 +30,22 @@
             </div> -->
 
             <div class="form-row">
-                <input type="radio" name="Cs-10" id="Cs-10" value='Luca1' v-model='topics' ref='radio'>
+                <input type="checkbox" name="Cs-10" id="Cs-10" value='Luca1' v-model='topics' ref='checkbox'>
                 <label for='Cs-10'>Első rész</label>
             </div>
 
             <div class="form-row">
-                <input type="radio" name="Cs-25" id="Cs-25" value='Luca2' v-model='topics' ref='radio'>
+                <input type="checkbox" name="Cs-25" id="Cs-25" value='Luca2' v-model='topics' ref='checkbox'>
                 <label for='Cs-25'>Második rész</label>
             </div>
 
             <div class="form-row">
-                <input type="radio" name="Cs-50" id="Cs-50" value='Luca3' v-model='topics' ref='radio'>
+                <input type="checkbox" name="Cs-50" id="Cs-50" value='Luca3' v-model='topics' ref='checkbox'>
                 <label for='Cs-50'>Harmadik rész</label>
             </div>
 
             <div class="form-row">
-                <input type="radio" name="Cs-100" id="Cs-100" value='Hulyeseg' v-model='topics' ref='radio'>
+                <input type="checkbox" name="Cs-100" id="Cs-100" value='Hulyeseg' v-model='topics' ref='checkbox'>
                 <label for='Cs-100'>Általános műveltség</label>
             </div>
 <!--
@@ -84,8 +84,8 @@
       </div>
       <div class='buttons'>
         <div class="button-row">
-            <!-- <button class='button-54' @click='selectall'>Mind</button> -->
-            <!-- <button class='button-54' @click='selectnone'>Egyik sem</button> -->
+            <button class='button-54' @click='selectall'>Mind</button>
+            <button class='button-54' @click='selectnone'>Egyik sem</button>
         </div>
         <div class="button-row">
             <button class='button-74' @click='submitted'>START</button>
@@ -103,14 +103,14 @@ export default {
         }
     },
     methods: {
-        // selectall() {
-        //     document.querySelectorAll('input[type="checkbox"]').forEach((element) => {
-        //         this.topics.push(element.id)
-        //     })
-        // },
-        // selectnone() {
-        //     this.topics = [];
-        // },
+        selectall() {
+            document.querySelectorAll('input[type="checkbox"]').forEach((element) => {
+                this.topics.push(element.id)
+            })
+        },
+        selectnone() {
+            this.topics = [];
+        },
         submitted() {
             if (this.topics.length==0) {
                 alert('Na, legalább egyet válassz azért.')

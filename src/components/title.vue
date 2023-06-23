@@ -6,7 +6,7 @@
             title: {
                 immediate: true,
                 handler() {
-                    document.title = this.title;
+                    document.title = "Gergőke legénybúcsúja";
                 }
             }
         },
