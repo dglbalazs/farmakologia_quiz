@@ -26,10 +26,11 @@ export default {
   left:0px;
   width:100%;
   height:100%;
-  opacity:0.4;
-  background-image: url('../assets/background.jpg');
+  opacity:1;
+  background-image: url('../assets/openbg.png');
   background-position:center;
-  background-size:cover;
+  background-size:contain;
+  background-repeat: no-repeat;
 }
 
 </style>

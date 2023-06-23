@@ -57,12 +57,13 @@ export default {
   left:0px;
   width:100%;
   height:100%;
-  opacity:0.4;
+  opacity:0.05;
   /*background-image: url('../assets/exam.jpg');*/
-  background-color: lightblue;
+  background-color: lightskyblue;
   background-position:center;
   background-size:cover;
   background-repeat: no-repeat;
+  background-image: url('../assets/beerbg.jpg');
   z-index:-1;
 }
 
