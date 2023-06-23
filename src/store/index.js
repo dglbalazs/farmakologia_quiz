@@ -415,7 +415,7 @@ export default createStore({
       {
         id: 25,
         cat:'Luca3',
-        type: 'tf',
+        type: 'q',
         question: 'Mi a legjellegzetesebb táncmozdulata? (mutasd meg)',
         answer:'LOL fogalmunk sincs',
         option1: '',
@@ -449,7 +449,7 @@ export default createStore({
       {
         id: 27,
         cat:'Luca3',
-        type: 'tf',
+        type: 'q',
         question: 'Mi volt a leghülyébb balesete?',
         answer:'Amikor megcsúszott rollerrel ügyeletbe menet',
         option1: '',
