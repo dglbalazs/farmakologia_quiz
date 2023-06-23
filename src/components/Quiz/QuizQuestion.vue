@@ -4,8 +4,8 @@
     <div 
     :class="['answer-type-q',answered ? 'answered' : '']" 
      v-if='type=="q"'>
-        <div class="desc" v-if='!answered'>Mondd fel magadnak, aztán mehet az ellenőrzés! :)</div>
-        <div class="desc" v-if='answered'>Hogy ment, gyönyörű? :)</div>
+        <div class="desc" v-if='!answered'>Na tessék, mondjad!</div>
+        <div class="desc" v-if='answered'>Csapat! Hogy értékeljük?</div>
         <div 
         v-if='answered'
         class="answer"
@@ -21,7 +21,7 @@
             rating_selected=='negative' ? 'selected' : '']"
         id='negative' v-if='answered' @click='openquestion_rating'
         >
-            Ezt még gyakorolni kell
+            Kurvára nem tudta
         </div>
 
         <div 
@@ -30,7 +30,7 @@
             rating_selected=='neutral' ? 'selected' : '']"
         id='neutral' v-if='answered' @click='openquestion_rating'
         >
-            Valamennyire megy, de nem teljesen
+            Valamennyire oké, de nem teljesen
         </div>
 
         <div 
@@ -39,7 +39,7 @@
             rating_selected=='positive' ? 'selected' : '']"
         id='positive' v-if='answered' @click='openquestion_rating'
         >
-            Ezt fixen tudom
+            Kibaszott király ez a fiú
         </div>
             
     </div>
@@ -48,35 +48,68 @@
     :class="['answer-type-tf',answered ? 'answered' : '']" 
     v-if='type=="tf"'
     >
-        <div class="desc">Igaz vagy hamis?</div>
-        <div class="answer" v-if='tf_random' v-html='t_answer'></div>
-        <div class="answer" v-if='!tf_random' v-html='f_answer'></div>
+        <div class="desc">Tessék választani egyet Geri</div>
         <div class="reply" v-if='answered' v-html='reply_msg'></div>
-        <div
-            id='igaz' 
-            @click="true_or_false_select"
-            :class="[
-            'form-row',
-            tr_selected=='igaz' ? 'selected' : '',
-            answered && tf_random ? 'correctans' : '',
-            answered && !tf_random ? 'incorrectans' : ''
-            ]"
-        >
-        Igaz 
-        </div>
+        <div class='options'>
+            <div
+            v-if="option1 != ''"
+                id='option1' 
+                @click="true_or_false_select"
+                :class="[
+                'form-row',
+                'new_option',
+                tr_selected=='option1' ? 'selected' : '',
+                answered && tr_selected=='option1' && correct_answ ? 'correctans' : '',
+                answered && tr_selected=='option1' && !correct_answ ? 'incorrectans' : ''
+                ]"
+            >
+            {{option1}} 
+            </div>
 
-        <div 
-            id='hamis' 
-            @click='true_or_false_select'
-            :class="[
-            'form-row',
-            tr_selected=='hamis' ? 'selected' : '',
-            answered && !tf_random ? 'correctans' : '',
-            answered && tf_random ? 'incorrectans' : '']"
-        >
-        Hamis
+            <div 
+            v-if="option2 != ''"
+                id='option2' 
+                @click='true_or_false_select'
+                :class="[
+                'form-row',
+                tr_selected=='option2' ? 'selected' : '',
+                answered && tr_selected=='option2' && correct_answ ? 'correctans' : '',
+                answered && tr_selected=='option2' && !correct_answ ? 'incorrectans' : ''
+                ]"
+            >
+            {{option2}}
+            </div>
+
+            <div 
+                v-if="option3 != ''"
+                id='option3' 
+                @click='true_or_false_select'
+                :class="[
+                'form-row',
+                tr_selected=='option3' ? 'selected' : '',
+                answered && tr_selected=='option3' && correct_answ ? 'correctans' : '',
+                answered && tr_selected=='option3' && !correct_answ ? 'incorrectans' : ''
+                ]"
+            >
+            {{option3}}
+            </div>
+
+            <div 
+                v-if="option4 != ''"
+                id='option4' 
+                @click='true_or_false_select'
+                :class="[
+                'form-row',
+                tr_selected=='option4' ? 'selected' : '',
+                answered && tr_selected=='option4' && correct_answ ? 'correctans' : '',
+                answered && tr_selected=='option4' && !correct_answ ? 'incorrectans' : ''
+                ]"
+            >
+            {{option4}}
+            </div>
         </div>
     </div>
+
     <button class='button-54' v-if="!answered" @click='getAnswer'>Megvan a válasz</button>
     <button class='button-54' v-if="answered" @click='nextQuestion'>Következő</button>
 </template>
@@ -90,7 +123,14 @@ export default {
         type: String,
         answer: String,
         t_answer: String,
-        f_answer: String
+        f_answer: String,
+        option1: String,
+        option2: String,
+        option3: String,
+        option4: String,
+        solution: Array,
+        desc_poz: String,
+        desc_neg: String
     },
     data() {
         return {
@@ -103,6 +143,7 @@ export default {
             reply_msg: String,
             tf_random: Boolean,
             tr_selected: '',
+            answer_selected : '',
 
             //open ended
             intervals: [],
@@ -120,6 +161,7 @@ export default {
                     this.tr_selected = ''
                 } else {
                     this.tr_selected = event.target.id
+                    this.answer_selected = event.target.innerHTML
                 }
             }
         },
@@ -141,29 +183,40 @@ export default {
                     let basic_msg = ''
                     
                     this.answered = true
-                    let chosen_answ = this.tr_selected=='igaz' ? true : false
-                    let real_ans = this.tf_random
-
-                    if (chosen_answ == real_ans) {
-                        this.correct_answ = true
-                        basic_msg = 'Nagyon jó!'
-
-                        if (!real_ans) {
-                            this.reply_msg = basic_msg + '<br/>Hiszen:<br/><h3>' + this.t_answer + '</h3>'
-                        } else {
-                            this.reply_msg = basic_msg
+                    let chosen_answ = this.answer_selected
+                    this.correct_answ = false;
+                    this.solution.forEach(e => {
+                        if (e == chosen_answ) {
+                            this.correct_answ = true;
                         }
+                    })
+
+                    if (this.correct_answ) {
+
+                        if (this.desc_poz == undefined || this.desc_poz == '') {
+                            basic_msg = 'Nagyon kis ügyi vagy!'
+                        } else {
+                            basic_msg = this.desc_poz
+                        }
+
+                        // if (!real_ans) {
+                        //     this.reply_msg = basic_msg + '<br/>Hiszen:<br/><h3>' + this.t_answer + '</h3>'
+                        // } else {
+                            this.reply_msg = basic_msg
+                        // }
 
                     } else {
-                        this.correct_answ = false
-                        let corrected_msg = this.t_answer 
-                        basic_msg = 'Majdnem - '
-
-                        if (this.tf_random) {
-                            this.reply_msg = basic_msg + ' Sajnos, ez valójában nagyon is <b><font color="GREEN">igaz</font></b>'
+                        if (this.desc_neg == undefined || this.desc_neg == '') {
+                            basic_msg = 'Nem igazán'
                         } else {
-                            this.reply_msg = basic_msg + ' Sajnos, ez valójában <b><font color="RED">hamis</font></b> hiszen:<br/><h3>' + corrected_msg + '</h3>'
+                            basic_msg = this.desc_neg
                         }
+
+                        // if (this.tf_random) {
+                            this.reply_msg = basic_msg + '<br/>A helyes megfejtés: <b><font color="GREEN">' + this.solution.join(' vagy ') +'</font></b>'
+                        // } else {
+                        //     this.reply_msg = basic_msg + ' Sajnos, ez valójában <b><font color="RED">hamis</font></b> hiszen:<br/><h3>' + corrected_msg + '</h3>'
+                        // }
                     } 
 
                     this.question_data.id = this.id
@@ -173,6 +226,7 @@ export default {
                     this.question_data.t_answer = this.t_answer
                     this.question_data.f_answer = this.f_answer
                     this.question_data.correctly_answered = this.correct_answ
+                    this.question_data.solution = this.solution
                 }
             } else if (this.type=='q') {
                 this.question_data.id = this.id
@@ -190,7 +244,7 @@ export default {
         nextQuestion() {
             if (this.type=='q') {
                 if (this.rating_selected=='') {
-                    alert('Előbb mondd el, hogy ment cuki')
+                    alert('Előbb mondd el, hogy ment tesi')
                     return null
               } else {
                    this.question_data.correctly_answered = this.rating_selected
@@ -202,7 +256,7 @@ export default {
         timerFunction() {
             var timing_start = setInterval(() => {
                 this.time_passed += 1
-                console.log(this.time_passed)
+                // console.log(this.time_passed)
                 this.timer_convert(this.time_passed)
                 let minutes_string = this.time_passed_minutes<10 ? '0' + this.time_passed_minutes.toString() : this.time_passed_minutes.toString()
                 let seconds_string = this.time_passed_seconds<10 ? '0' + this.time_passed_seconds.toString() : this.time_passed_seconds.toString()
@@ -219,7 +273,7 @@ export default {
     },
     mounted: function(){
         if (this.type=='tf') {
-            this.tf_random = Math.random() < 0.5;
+            this.tf_random = true;
         } else if (this.type=='q') {
             this.timerFunction()
         }
@@ -258,7 +312,7 @@ OPEN QUESTIONS
 */
 .answer-type-q {
     grid-template-columns: auto 1fr 1fr 1fr auto;
-    grid-template-rows: 25px 200px auto 100px;
+    grid-template-rows: 25px auto auto 100px;
     grid-template-areas: 
         'description description description  description description'
         'answer  answer answer answer answer'
@@ -364,29 +418,30 @@ TRUE OR FALSE
 */
 
 .answer-type-tf {
+    min-height: 40vh;
     grid-template-columns: auto 1fr 1fr auto;
-    grid-template-rows: 25px 200px auto 100px;
+    grid-template-rows: 25px 50px auto 1fr;
     grid-template-areas: 
         'description description description  description'
-        'question  question question question'
+        '.  . . .'
         '. . . .'
-        '.  igaz hamis  .'
+        '.  options options  .'
     ;
 }
 
 .answer-type-tf.answered {
     grid-template-columns: auto 1fr 1fr auto;
-    grid-template-rows: 25px 200px auto 50px;
+    grid-template-rows: 25px 50px auto 1fr;
     grid-template-areas: 
         'description description description  description'
-        'question  question question question'
+        'reply  reply reply reply'
         'reply  reply   reply   reply'
-        '.  igaz hamis  .'
+        '.  options options  .'
     ;
 }
 /* FORM */
 
-.answer-type-tf > .answer {
+.answer-type-tf .answer {
     grid-area: question;
     display: flex;
     justify-content: center;
@@ -397,31 +452,31 @@ TRUE OR FALSE
     padding: 50px;
 }
 
-.answer-type-tf > .desc {
+.answer-type-tf .desc {
     grid-area: description
 }
 
-.answer-type-tf > #igaz {
-    grid-area: igaz
+.answer-type-tf .options {
+    grid-area: options;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1em;
 }
 
-.answer-type-tf > #hamis {
-    grid-area: hamis
-}
 
-.answer-type-tf > .reply {
+.answer-type-tf .reply {
     grid-area: reply;
     padding: 25px;
     line-height:1.75;
 }
 
-.answer-type-tf > .form-row {
+.answer-type-tf .form-row {
     --transform-scale: 1.1;
     display: flex;
     justify-content: center;
     align-items: center;
     background: white;
-    padding: .5em;
+    padding: 1em .5em;
     box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.514);
     border-radius: 10px;
     cursor:pointer;
@@ -430,26 +485,21 @@ TRUE OR FALSE
     height:100%;
   }
 
-.answer-type-tf > .form-row#igaz:hover,
-.answer-type-tf > .form-row#igaz:focus,
-.answer-type-tf > .form-row#igaz.selected{ 
+.answer-type-tf .form-row:hover,
+.answer-type-tf .form-row:focus,
+.answer-type-tf .form-row.selected{ 
     background:rgb(170, 212, 170);
 }
 
-.answer-type-tf > .form-row#hamis:hover,
-.answer-type-tf > .form-row#hamis:focus,
-.answer-type-tf > .form-row#hamis.selected{ 
-    background:rgb(240, 169, 169);
-    /*transform: scale(var(--transform-scale))*/
-}
-
-.answer-type-tf > .correctans {
+.answer-type-tf .correctans {
+    background:rgb(170, 212, 170) !important; 
     transform: scale(1.1);
 }
 
-.answer-type-tf > .incorrectans {
+.answer-type-tf .incorrectans {
     transform: scale(0.9);
     opacity:0.6;
+    background:rgb(240, 169, 169) !important;
 }
 
 button {

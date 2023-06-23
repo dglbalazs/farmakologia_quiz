@@ -3,8 +3,8 @@
     <div class='result-statistics'>
       <div class="asked">Kérdések - {{questions_asked}} db</div>
       <div class="correct">Helyes - {{questions_correct}} db</div>
-      <div class="neutral">Közepes - {{questions_maybe}} db</div>
-      <div class="neutral">Helytelen - {{questions_incorrect}} db</div>
+      <div class="neutral">Félpont - {{questions_maybe}} db</div>
+      <div class="neutral">Hibák - {{questions_incorrect}} db</div>
     </div>
     <QuizResult
     v-for='result in question_results'
@@ -15,6 +15,7 @@
     :answer='result.answer'
     :t_answer='result.t_answer'
     :correctly_answered='result.correctly_answered'
+    :solution = 'result.solution'
     ></QuizResult>
   </div>
 </template>

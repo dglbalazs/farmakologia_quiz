@@ -105,12 +105,20 @@ a {
         ANIMATION 
  ---------------------------------------------------------------------- */
 
-.loading-enter-active {
+ .loading-enter-active {
   animation: bounce-in .6s reverse;
 }
 
 .loading-leave-active {
   animation: bounce-in .6s;
+}
+
+.loading2-enter-active {
+  animation: bounce-in .7s reverse;
+}
+
+.loading2-leave-active {
+  animation: bounce-in .5s;
 }
 
 @keyframes bounce-in {
@@ -121,6 +129,9 @@ a {
     opacity:0.05;
   }
 }
+
+
+
 
 /* ---------------------------------------------------------------------- /
         BUTTONS 

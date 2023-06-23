@@ -7,26 +7,8 @@
                 onclick='void(0)'
                 @click='clicked'
             >
-            <span>Quiz</span>
+            <span>Csapassuk</span>
             </div>
-
-            <div
-                :class="[mobile_active_option=='learning' ? 'selected' : '','menu-option']" 
-                id='learning'
-                onclick='void(0)'
-                @click='clicked'
-            >
-            <span>Ismétlés</span>
-            </div>
-
-            <!-- <div 
-                :class="[mobile_active_option=='smthelse' ? 'selected' : '','menu-option']" 
-                id='smthelse'
-                onclick='void(0)'
-                @click='clicked'
-            >
-            <span>Something else</span>
-            </div> -->
         </div>
     </div>
 </template>
@@ -80,7 +62,7 @@ export default {
 .menu-options {
     height:100%;
     width:100%;
-    padding: 50px;
+    padding: 75vh 25vw;
     border: 1px solid black;
 
     display: grid;
@@ -90,6 +72,7 @@ export default {
 
 @media (max-width: 50em) {
     .menu-options {
+        padding: 75vh 5vw;
         grid-auto-flow: row;
     }
 }
@@ -136,7 +119,7 @@ export default {
 
 #quiz {
     /* grid-area: option1; */
-    --background-img-url: url('../assets/exam.jpg');
+    --background-img-url: black;
     transition:2s;
 }
 
@@ -161,10 +144,10 @@ export default {
   left:0px;
   width:100%;
   height:100%;
-  opacity:0.5;
-  background-image: var(--background-img-url);
-  background-position:center;
-  background-size:cover;
+  opacity:.5;
+  /* background: var(--background-img-url); */
+  /* background-position:center; */
+  /* background-size:cover; */
   transition:1s;
   border-radius: 25px;
 }

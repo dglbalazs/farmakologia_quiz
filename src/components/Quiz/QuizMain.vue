@@ -30,8 +30,8 @@
             </div> -->
 
             <div class="form-row">
-                <input type="radio" name="Cs-10" id="Cs-10" value='cs-generator-10' v-model='topics' ref='radio'>
-                <label for='Cs-10'>Csecsemő Mozgásfejlődés - 10 kérdés</label>
+                <input type="radio" name="Cs-10" id="Cs-10" value='Luca1' v-model='topics' ref='radio'>
+                <label for='Cs-10'>Első rész</label>
             </div>
 
             <div class="form-row">

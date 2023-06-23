@@ -22,7 +22,8 @@ export default {
         type: String,
         answer: String,
         t_answer: String,
-        correctly_answered: String
+        correctly_answered: String,
+        solution: Array
     },
     data() {
         return {
@@ -42,22 +43,22 @@ export default {
             this.definition = this.answer
             if (this.correctly_answered=='negative') {
                 this.result_helper = 'r'
-                this.result = 'Még nem jó'
+                this.result = 'Full szar'
             } else if (this.correctly_answered=='neutral') {
                 this.result_helper = 'k'
                 this.result = 'Majdnem'
             } else if (this.correctly_answered=='positive') {
                 this.result_helper = 'j'
-                this.result = 'Szuper! :)'
+                this.result = 'Helyes'
             }
         } else if (this.type=='tf') {
-            this.definition = this.t_answer
+            this.definition = this.solution.join(' vagy ')
             if (this.correctly_answered==true) {
                 this.result_helper = 'j'
-                this.result = 'Szuper! :)'
+                this.result = 'Helyes'
             } else if (this.correctly_answered==false) {
                 this.result_helper = 'r'
-                this.result = 'Még nem jó'
+                this.result = 'Full szar'
             }
         }
     }
@@ -70,7 +71,7 @@ export default {
     display: flex;
     gap: 15px;
     background: white;
-    border-radius: 25px;
+    border-radius: .2em;
     margin: 25px;
     padding: 25px;
     justify-content: center;
@@ -105,7 +106,7 @@ export default {
     margin: 25px;
     font-size: 1em;
     background: white;
-    border-radius: 50px;
+    /* border-radius: 50px; */
     height: auto;
     padding:50px;
 }
