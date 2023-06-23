@@ -35,18 +35,18 @@
             </div>
 
             <div class="form-row">
-                <input type="radio" name="Cs-25" id="Cs-25" value='cs-generator-25' v-model='topics' ref='radio'>
-                <label for='Cs-25'>Csecsemő Mozgásfejlődés - 25 kérdés</label>
+                <input type="radio" name="Cs-25" id="Cs-25" value='Luca2' v-model='topics' ref='radio'>
+                <label for='Cs-25'>Második rész</label>
             </div>
 
             <div class="form-row">
-                <input type="radio" name="Cs-50" id="Cs-50" value='cs-generator-50' v-model='topics' ref='radio'>
-                <label for='Cs-50'>Csecsemő Mozgásfejlődés - 50 kérdés</label>
+                <input type="radio" name="Cs-50" id="Cs-50" value='Luca3' v-model='topics' ref='radio'>
+                <label for='Cs-50'>Harmadik rész</label>
             </div>
 
             <div class="form-row">
-                <input type="radio" name="Cs-100" id="Cs-100" value='cs-generator-100' v-model='topics' ref='radio'>
-                <label for='Cs-100'>Csecsemő Mozgásfejlődés - 100 kérdés</label>
+                <input type="radio" name="Cs-100" id="Cs-100" value='Hulyeseg' v-model='topics' ref='radio'>
+                <label for='Cs-100'>Általános műveltség</label>
             </div>
 <!--
             <div class="form-row">
