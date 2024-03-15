@@ -1,6 +1,6 @@
 <template>
   <div class="form-wrapper">
-    <h1 class="form-title">Milyen témákat érintsünk?</h1>
+    <h1 class="form-title">Milyen témák legyenek?</h1>
     <form action="">
       <!-- <div class="form-row">
                 <input type="checkbox" name="Elsodia" id="Elsodia" value='Elsodia' v-model='topics' ref='checkbox'>
