@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "app-store-scraper": "^0.17.0",
     "core-js": "^3.6.5",
     "eslint-loader": "^4.0.2",
     "vue": "^3.0.0",

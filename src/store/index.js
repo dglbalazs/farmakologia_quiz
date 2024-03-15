@@ -8,6 +8,7 @@ export default createStore({
     questions: [
       {
         id: 1,
+<<<<<<< HEAD
         cat:'Luca1',
         type: 'q',
         question: 'Mi Luca teljes (!) születési neve?',
@@ -36,11 +37,42 @@ export default createStore({
         t_answer: '',
         f_answer: '',
         desc_poz: '',
+=======
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Melyik évben jöttetek össze?',
+        answer:'Lukács Luca',
+        option1: '2010',
+        option2: '2011',
+        option3: '2012',
+        option4: '2013',
+        solution: ['2012'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'Jó, ez még megy.',
+        desc_neg: 'HALO NIKI ARNI NEM TUDJA MIKOR JÖTTETEK ÖSSZE'
+      },
+      {
+        id: 2,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Ki mondta elsōnek, hogy szereti a másikat?',
+        answer:'',
+        option1: 'Arni',
+        option2: 'Niki',
+        option3: 'Balázs',
+        option4: 'Árpi',
+        solution: ['Niki'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'Árpi is nagy esélyes volt pedig',
+>>>>>>> 52e0965 (added arni)
         desc_neg: ''
 
       },
       {
         id: 3,
+<<<<<<< HEAD
         cat:'Luca1',
         type: 'q',
         question: 'Ki írt rá először a másikra, és mikor? ',
@@ -53,11 +85,26 @@ export default createStore({
         t_answer: '',
         f_answer: '',
         desc_poz: '',
+=======
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Mit szeret Niki a leginkább benned?',
+        answer:'',
+        option1: 'Hogy egy létai köcsög vagy',
+        option2: 'Hogy lazac-srác vagy',
+        option3: 'A nyelvtechnikádat',
+        option4: 'Hogy könnyen teremtessz kapcsolatot a DiVinonál 40+ os bigékkel',
+        solution:['Hogy könnyen teremtessz kapcsolatot a DiVinonál 40+ os bigékkel'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'De azért lazac-srác is vagy',
+>>>>>>> 52e0965 (added arni)
         desc_neg: ''
 
       },
       {
         id: 4,
+<<<<<<< HEAD
         cat:'Luca1',
         type: 'tf',
         question: 'Luca melyik testrészedet szereti a legjobban?',
@@ -87,10 +134,42 @@ export default createStore({
         f_answer: '',
         desc_poz: 'Beszt együttes.',
         desc_neg: 'Ezekkel tudod, hogy bünti pontokat gyűjtessz?'
+=======
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Mi Niki kedvenc autója?',
+        answer:'',
+        option1: 'Fiat Multipla',
+        option2: 'Bármelyik új szériás Lada',
+        option3: 'G-Wagon',
+        option4: 'G-Wagina',
+        solution:['G-Wagon'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'G-WAGINA VICCES VOLT MI? HEHE',
+        desc_neg: ''
+      },
+      {
+        id: 5,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Hány gyereket szeretne?',
+        answer:'',
+        option1: 'Egyet sem',
+        option2: '1',
+        option3: '2',
+        option4: '3',
+        solution:['2'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: '',
+        desc_neg: ''
+>>>>>>> 52e0965 (added arni)
 
       },
       {
         id: 6,
+<<<<<<< HEAD
         cat:'Luca1',
         type: 'tf',
         question: 'Igaz-e, hogy Luca általános iskolai legjobb barátját Martinnak hívták?',
@@ -104,10 +183,26 @@ export default createStore({
         f_answer: '',
         desc_poz: 'Honnan tudta he',
         desc_neg: 'Nem volt általános iskolai legjobb barátja, beszoptad'
+=======
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Mit mond Niki a leggyakrabban, amikor káromkodik?',
+        answer:'',
+        option1: 'A teringettét',
+        option2: 'Bazdmeg',
+        option3: 'Bobr Kurwa',
+        option4: 'Pénisz',
+        solution:['Bazdmeg'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'Biztos sokszor kiváltod belőle',
+        desc_neg: 'Közel közel, de mégsem'
+>>>>>>> 52e0965 (added arni)
 
       },
       {
         id: 7,
+<<<<<<< HEAD
         cat:'Luca1',
         type: 'tf',
         question: 'Mikor van a leendő anyós születésnapja?',
@@ -321,6 +416,16 @@ export default createStore({
         option3: 'Pornstar Johhny Sins',
         option4: 'Nincs kedvenc itala',
         solution:['Pornstar Martini'],
+=======
+        cat:'Niki1',
+        type: 'q',
+        question: 'Milyen nevet adna a születendő gyereketeknek?',
+        answer:'Ha fiú, akkor Ernst vagy Nolen, ha Lány Lívia Lídia',
+        option1: '',
+        option2: '',
+        option3: '',
+        option4: '',
+        solution:[''],
         t_answer: '',
         f_answer: '',
         desc_poz: '',
@@ -328,6 +433,42 @@ export default createStore({
 
       },
       {
+        id: 8,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Igaz-e, hogy Niki az iskolában levetkōzött az osztálytársai elōtt?',
+        answer:'',
+        option1: 'Igaz',
+        option2: 'Hamis',
+        option3: '',
+        option4: '',
+        solution:['Igaz'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'LOL DE MINDENKI LEVETKŐZÖTT',
+        desc_neg: 'Lesz egy kis megbeszélnivalód Nikivel, úgy néz ki'
+
+      },
+      {
+        id: 9,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Mi volt a legveszélyesebb dolog, amit valaha csinált?',
+        answer:'',
+        option1: 'Összejött veled',
+        option2: 'Bungee jumping',
+        option3: 'Buszjegyre kért pénzt egy cigánytól',
+        option4: 'Semmi veszély nincs az életében',
+        solution:['Semmi veszély nincs az életében','Összejött veled'],
+>>>>>>> 52e0965 (added arni)
+        t_answer: '',
+        f_answer: '',
+        desc_poz: '',
+        desc_neg: ''
+
+      },
+      {
+<<<<<<< HEAD
         id: 20,
         cat:'Luca2',
         type: 'tf',
@@ -355,6 +496,18 @@ export default createStore({
         option3: 'Varga Irén',
         option4: 'Anne Hathaway',
         solution:['Mila Kunis'],
+=======
+        id: 10,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Mi akart lenni kiskorában?',
+        answer:'',
+        option1: 'Gyümölcs a Jogobellában',
+        option2: 'Létai löncshús kofa',
+        option3: 'Ügyvéd',
+        option4: 'Vámos',
+        solution:['Ügyvéd'],
+>>>>>>> 52e0965 (added arni)
         t_answer: '',
         f_answer: '',
         desc_poz: '',
@@ -362,6 +515,7 @@ export default createStore({
 
       },
       {
+<<<<<<< HEAD
         id: 22,
         cat:'Luca3',
         type: 'tf',
@@ -440,6 +594,35 @@ export default createStore({
         option3: 'Faszod',
         option4: 'Mangó',
         solution:['Mangó'],
+=======
+        id: 11,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Hányszor kellett Nikinek kijönnie hajnalban, amikor hazaértél, és megmutatnia melyik lakásban laktok?',
+        answer:'',
+        option1: 'Egyszer sem',
+        option2: 'Heti egyszer',
+        option3: 'Négyszer',
+        option4: 'Számtalanszor',
+        solution:['Négyszer','Számtalanszor'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'Tes erre senki se tudja a választ, de leszokhatnál róla',
+        desc_neg: 'NA azért csak az én (Balázs) társaságomban vagy 3x előfordult már'
+
+      },
+      {
+        id: 12,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Melyik az a tulajdonságod, ami Nikit a legjobban idegesíti?',
+        answer:'',
+        option1: 'Fogyasztási szokások',
+        option2: 'Hogy egy létai köcsög vagy',
+        option3: 'Shadowboxing',
+        option4: 'Kipakolod a ruhákat a szekrényből és nem pakolod vissza',
+        solution:['Fogyasztási szokások','Hogy egy létai köcsög vagy','Shadowboxing','Kipakolod a ruhákat a szekrényből és nem pakolod vissza'],
+>>>>>>> 52e0965 (added arni)
         t_answer: '',
         f_answer: '',
         desc_poz: '',
@@ -447,6 +630,7 @@ export default createStore({
 
       },
       {
+<<<<<<< HEAD
         id: 27,
         cat:'Luca3',
         type: 'q',
@@ -491,6 +675,52 @@ export default createStore({
         option3: 'Zebra',
         option4: 'Zsiráf',
         solution:['Zsiráf'],
+=======
+        id: 13,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Melyik a kedvenc szexpozíciója?',
+        answer:'',
+        option1: 'Reversed-cowboy',
+        option2: 'Holland kemence',
+        option3: 'A létai kéjolló',
+        option4: '',
+        solution:['Reversed-cowboy','A létai kéjolló'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'A HÍRÖS LÉTAI KÉJOLLÓ',
+        desc_neg: 'A HÍRÖS LÉTAI KÉJOLLÓ'
+
+      },
+      {
+        id: 14,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Az alábbiak közül hol szeretne Niki a leginkább szeretkezni veled?',
+        answer:'',
+        option1: 'Létán',
+        option2: 'Stayben',
+        option3: 'Elsō napos fesztiváli ToiToi-ban',
+        option4: 'Utolsó napos összeszart fesztiváli ToiToi-ban',
+        solution:['Egyik sem'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: '',
+        desc_neg: 'SEHOL HAHAHAH - najó ezt lehet nem kérdeztük meg tőle'
+
+      },
+      {
+        id: 15,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Mi a kedvenc ruhadarabja?',
+        answer:'',
+        option1: 'Fejőgép',
+        option2: 'Latex búslakodó',
+        option3: 'Fekete bőrnadrág',
+        option4: 'Kozák kucsma',
+        solution:['Fekete bőrnadrág'],
+>>>>>>> 52e0965 (added arni)
         t_answer: '',
         f_answer: '',
         desc_poz: '',
@@ -498,6 +728,7 @@ export default createStore({
 
       },
       {
+<<<<<<< HEAD
         id: 30,
         cat:'Luca3',
         type: 'tf',
@@ -511,10 +742,26 @@ export default createStore({
         t_answer: '',
         f_answer: '',
         desc_poz: '',
+=======
+        id: 16,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Mi volt az elsō job, amit Niki elvállalt?',
+        answer:'',
+        option1: 'Blowjob',
+        option2: 'Onlyfans',
+        option3: 'Műkörmös',
+        option4: '',
+        solution:['Műkörmös'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'Nem? NEM?',
+>>>>>>> 52e0965 (added arni)
         desc_neg: ''
 
       },
       {
+<<<<<<< HEAD
         id: 31,
         cat:'Luca3',
         type: 'tf',
@@ -626,6 +873,17 @@ export default createStore({
         option3: 'Zöld',
         option4: 'Sárga',
         solution:['Zöld'],
+=======
+        id: 17,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Mi volt az elsō becenév, ahogy Niki szólított téged?',
+        answer:'',
+        option1: 'Létai köcsög',
+        option2: 'Szívem',
+        option3: 'Daddy',
+        option4: 'Mommy',
+        solution:['Szívem'],
         t_answer: '',
         f_answer: '',
         desc_poz: '',
@@ -633,6 +891,42 @@ export default createStore({
 
       },
       {
+        id: 18,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Mi a legfurább étel, amit megeszik?',
+        answer:'',
+        option1: 'Pacal',
+        option2: 'Létai löncshús',
+        option3: 'Provence-i melegszendó',
+        option4: 'Kakashere',
+        solution:['Provence-i melegszendó'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'Pedig a melegszendóban semmi furi nincs',
+        desc_neg: 'Pedig a melegszendóban semmi furi nincs'
+
+      },
+      {
+        id: 19,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Niki melyik testrészed szereti a legjobban?',
+        answer:'',
+        option1: 'Hát biztos a fasz, nem tudom',
+        option2: 'Létai löncshús',
+        option3: 'A kis kezed',
+        option4: '',
+        solution:['A kis kezed'],
+>>>>>>> 52e0965 (added arni)
+        t_answer: '',
+        f_answer: '',
+        desc_poz: '',
+        desc_neg: ''
+
+      },
+      {
+<<<<<<< HEAD
         id: 38,
         cat:'Hulyeseg',
         type: 'tf',
@@ -677,6 +971,52 @@ export default createStore({
         option3: '42',
         option4: '53',
         solution:['42'],
+=======
+        id: 20,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Mekkora Niki lábmérete?',
+        answer:'',
+        option1: 'US 8.5',
+        option2: 'UK 5.5',
+        option3: '24,1 cm',
+        option4: '9,25 hüvelyk',
+        solution:['UK 5.5'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'UK 5.5, azaz EU 38!',
+        desc_neg: 'UK 5.5, azaz EU 38!'
+
+      },
+      {
+        id: 21,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Nikinek melyik filmrōl jutsz mindig eszébe?',
+        answer:'',
+        option1: 'Túl a barátságon',
+        option2: 'Paranormal Activity',
+        option3: 'Trópusi vihár',
+        option4: 'Star Wars',
+        solution:['Star Wars','Trópusi vihár'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'KIRK LAZARUS!!',
+        desc_neg: 'KIRK LAZARUS!!'
+
+      },
+      {
+        id: 22,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Hol szeretett aludni Arni Klinika buli után?',
+        answer:'',
+        option1: 'Létán',
+        option2: 'Az erdőben',
+        option3: 'A Kenézyben',
+        option4: 'Kasszában',
+        solution:['Az erdőben'],
+>>>>>>> 52e0965 (added arni)
         t_answer: '',
         f_answer: '',
         desc_poz: '',
@@ -684,6 +1024,7 @@ export default createStore({
 
       },
       {
+<<<<<<< HEAD
         id: 41,
         cat:'Hulyeseg',
         type: 'tf',
@@ -835,6 +1176,24 @@ export default createStore({
         desc_neg: ''
 
       }
+=======
+        id: 23,
+        cat:'Niki1',
+        type: 'tf',
+        question: 'Kit szeretsz jobban: a menyasszonyodat vagy a testvéred?',
+        answer:'',
+        option1: 'Nikit',
+        option2: 'Nikit',
+        option3: '',
+        option4: '',
+        solution:['Nikit'],
+        t_answer: '',
+        f_answer: '',
+        desc_poz: 'Oh nice',
+        desc_neg: ''
+
+      },      
+>>>>>>> 52e0965 (added arni)
     ],
   },
   mutations: {
