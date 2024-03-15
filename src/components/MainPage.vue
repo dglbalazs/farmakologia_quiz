@@ -1,17 +1,4 @@
 <template>
-<<<<<<< HEAD
-    <div class="home-wrapper">
-        <div class="menu-options">
-            <div
-                :class="[mobile_active_option=='quiz' ? 'selected' : '','menu-option']" 
-                id='quiz'
-                onclick='void(0)'
-                @click='clicked'
-            >
-            <span>Csapassuk</span>
-            </div>
-        </div>
-=======
   <div class="home-wrapper">
     <div class="menu-options">
       <div
@@ -25,7 +12,6 @@
       >
         <span>Okay let's go</span>
       </div>
->>>>>>> 52e0965 (added arni)
     </div>
   </div>
 </template>
@@ -71,23 +57,6 @@ export default {
   left: 0px;
 }
 .menu-options {
-<<<<<<< HEAD
-    height:100%;
-    width:100%;
-    padding: 75vh 25vw;
-    border: 1px solid black;
-
-    display: grid;
-    grid-auto-flow: column;
-    gap: 2em;
-}
-
-@media (max-width: 50em) {
-    .menu-options {
-        padding: 75vh 5vw;
-        grid-auto-flow: row;
-    }
-=======
   height: 100%;
   width: 100%;
   padding: 75vh 25vw;
@@ -103,7 +72,6 @@ export default {
     padding: 75vh 5vw;
     grid-auto-flow: row;
   }
->>>>>>> 52e0965 (added arni)
 }
 
 .menu-option {
@@ -146,23 +114,6 @@ export default {
 }
 
 #quiz {
-<<<<<<< HEAD
-    /* grid-area: option1; */
-    --background-img-url: black;
-    transition:2s;
-}
-
-#learning {
-    /* grid-area: option2; */
-    --background-img-url: url('../assets/study.jpg');
-    transition:2s;
-}
-
-#smthelse {
-    /* grid-area: option3; */
-    --background-img-url: url('../assets/suffer.jpg');
-    transition:2s;
-=======
   /* grid-area: option1; */
   --background-img-url: black;
   transition: 2s;
@@ -178,24 +129,9 @@ export default {
   /* grid-area: option3; */
   --background-img-url: url("../assets/suffer.jpg");
   transition: 2s;
->>>>>>> 52e0965 (added arni)
 }
 
 .menu-option:before {
-<<<<<<< HEAD
-  content: '';
-  display:block;
-  position:absolute;
-  top:0px;
-  left:0px;
-  width:100%;
-  height:100%;
-  opacity:.5;
-  /* background: var(--background-img-url); */
-  /* background-position:center; */
-  /* background-size:cover; */
-  transition:1s;
-=======
   content: "";
   display: block;
   position: absolute;
@@ -208,7 +144,6 @@ export default {
   /* background-position:center; */
   /* background-size:cover; */
   transition: 1s;
->>>>>>> 52e0965 (added arni)
   border-radius: 25px;
 }
 

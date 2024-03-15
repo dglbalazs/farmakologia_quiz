@@ -26,21 +26,8 @@ export default {
   methods: {
     ...mapActions(["setQuestions"]),
 
-<<<<<<< HEAD
-        goback() {
-            this.$router.push({ path: '/'})
-        },
-        setTopics(topics) {
-            this.topics = typeof topics == 'string' ? [topics] : topics;
-            this.init = false;
-            this.setQuestions(this.topics)
-            console.log(this.topics[0])
-            console.log('Ez jott vissza : ' + this.questions)
-        }
-=======
     goback() {
       this.$router.push({ path: "/" });
->>>>>>> 52e0965 (added arni)
     },
     setTopics(topics) {
       this.topics = typeof topics == "string" ? [topics] : topics;
@@ -58,23 +45,6 @@ export default {
 
 <style scoped>
 .quiz-wrapper:before {
-<<<<<<< HEAD
-  content: '';
-  display:block;
-  position:fixed;
-  top:0px;
-  left:0px;
-  width:100%;
-  height:100%;
-  opacity:0.05;
-  /*background-image: url('../assets/exam.jpg');*/
-  background-color: lightskyblue;
-  background-position:center;
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-image: url('../assets/beerbg.jpg');
-  z-index:-1;
-=======
   content: "";
   display: block;
   position: fixed;
@@ -90,7 +60,6 @@ export default {
   background-repeat: no-repeat;
   background-image: url("../assets/beerbg2.jpg");
   z-index: -1;
->>>>>>> 52e0965 (added arni)
 }
 
 .goback {

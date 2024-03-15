@@ -1,15 +1,8 @@
 <template>
   <div class="form-wrapper">
-<<<<<<< HEAD
-        <h1 class='form-title'>Milyen témákat érintsünk?</h1>
-        <form action="" >
-
-            <!-- <div class="form-row">
-=======
     <h1 class="form-title">Milyen témákat érintsünk?</h1>
     <form action="">
       <!-- <div class="form-row">
->>>>>>> 52e0965 (added arni)
                 <input type="checkbox" name="Elsodia" id="Elsodia" value='Elsodia' v-model='topics' ref='checkbox'>
                 <label for='Elsodia'>Első dia - 1. fele</label>
             </div>
@@ -35,28 +28,6 @@
                 <label for='secppt3'>Második ppt - 3. rész (AUC, AUC, még egy kis AUC, gyógyszerek felszívódása, adagolási útvonalak)</label>
             </div> -->
 
-<<<<<<< HEAD
-            <div class="form-row">
-                <input type="checkbox" name="Cs-10" id="Cs-10" value='Luca1' v-model='topics' ref='checkbox'>
-                <label for='Cs-10'>Első rész</label>
-            </div>
-
-            <div class="form-row">
-                <input type="checkbox" name="Cs-25" id="Cs-25" value='Luca2' v-model='topics' ref='checkbox'>
-                <label for='Cs-25'>Második rész</label>
-            </div>
-
-            <div class="form-row">
-                <input type="checkbox" name="Cs-50" id="Cs-50" value='Luca3' v-model='topics' ref='checkbox'>
-                <label for='Cs-50'>Harmadik rész</label>
-            </div>
-
-            <div class="form-row">
-                <input type="checkbox" name="Cs-100" id="Cs-100" value='Hulyeseg' v-model='topics' ref='checkbox'>
-                <label for='Cs-100'>Általános műveltség</label>
-            </div>
-<!--
-=======
       <div class="form-row">
         <input
           type="checkbox"
@@ -69,7 +40,6 @@
         <label for="Niki1">Niki</label>
       </div>
       <!--
->>>>>>> 52e0965 (added arni)
             <div class="form-row">
                 <input type="checkbox" name="tema5" id="tema5" value='tema5' v-model='topics' ref='checkbox'>
                 <label for='tema5'>Tema 5</label>
@@ -169,48 +139,6 @@ form {
 }
 
 .form-row {
-<<<<<<< HEAD
-    display: flex;
-    justify-content: center;
-    padding: .5em;
-    background: white;
-    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.514);
-    border-radius: 10px;
-    margin: 10px;
-  }
-
-  .form-row > label,
-  .form-row > input {
-      cursor:pointer;
-  }
-
-  .form-row > label:hover,
-  .form-row > input:hover,
-  .form-row > label:focus,
-  .form-row > input:focus{
-      transform: scale(var(--transform-scale));
-  }
-
-  .form-row > label {
-    --transform-scale: 1.01;
-    flex: 1;
-  }
-
-  .form-row > input {
-    --transform-scale: 1.7;
-    flex: 0;
-    transform: scale(1.5);
-  }
-
-  .form-row > input,
-  .form-row > button {
-    padding: .5em;
-  }
-
-  input[type='checkbox'],
-  input[type='radio'] {
-    margin: 5px 0px 10px 5px;
-=======
   display: flex;
   justify-content: center;
   padding: 0.5em;
@@ -218,7 +146,6 @@ form {
   box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.514);
   border-radius: 10px;
   margin: 10px;
->>>>>>> 52e0965 (added arni)
 }
 
 .form-row > label,
