@@ -253,6 +253,7 @@ a {
 
 /* CSS */
 .button-53 {
+  margin-inline: auto;
   background-color: #3dd1e7;
   border: 0 solid #e5e7eb;
   box-sizing: border-box;
