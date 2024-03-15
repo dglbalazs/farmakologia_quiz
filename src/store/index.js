@@ -11,7 +11,7 @@ export default createStore({
         cat:'Niki1',
         type: 'tf',
         question: 'Melyik évben jöttetek össze?',
-        answer:'Lukács Luca',
+        answer:'',
         option1: '2010',
         option2: '2011',
         option3: '2012',
